@@ -4,19 +4,26 @@
 */
 
 enum isWeekendEnum{
-  SUNDAY = 0,
-  MONDAY = 1,
-  TUESDAY = 1,
-  WEDNESDAY = 1,
-  THURSDAY = 1,
-  FRIDAY = 1,
-  SATURDAY = 0
+  SUNDAY,
+  MONDAY,
+  TUESDAY,
+  WEDNESDAY,
+  THURSDAY,
+  FRIDAY,
+  SATURDAY
 }
 
 function isWeekend(day: isWeekendEnum){
-  if(day)
-  console.log('Будніій...')
-  else console.log('Вихідний!!')
+  switch(day)
+  {
+    case isWeekendEnum.SUNDAY:
+    case isWeekendEnum.SATURDAY:
+      console.log("Вихіднииий!!");
+      break;
+      default:
+        console.log('Будній..');
+        
+  }
 
 }
 
